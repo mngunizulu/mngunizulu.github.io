@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Life Expectancy and impacting variables"
+subtitle: "An examination of what leads to longer life"
+date: 2023-01-26 23:45:13 -0400
+background: '/img/posts/01.jpg'
+---
+
+<p>Life expectancy is one of the most important and interesting measurements of human welfare. Although a long life does not guarantee a happy one, it does seem to be important to most people. </p>
+
+<p>There are so many variables which may or may not influence life expectancy, and the objective of this self-chosen project was to look at life expectancy in some 119 countries as well as 16 variables and their possible relationship with life expectancy.</p>
+
+<p>Understanding what influences life expectancy, or at least the correlation between certain variables and life expectancy would be extremely useful for both internal and external development agencies.</p>
+
+<p>Tools:
+    <ol>
+        <li>Python</li>
+        <li>Jupyter Notebooks</li>
+        <li>Libraries : Pandas, NumPy, Matplotlib, Sklearn Clustering</li>
+    </ol>
+</p>
+
+<h2 class="section-heading">Initial Data Exploration</h2>
+
+<p>The dataset was open-source data from the Worldbank. The dataset had a patchwork of missing values, which I uncovered during my initial exploratory data analysis. After identifying where these missing values were prevalent, I chose to limit the range of years from 2000 to 2015. </p>
+
+<p>Additionally, omitted 6 countries from the dataset, because they had far too many missing values. After this I remained with a dataset which that had less then 3% missing values. I used averages for each variable, for each country, to fill in the missing values respectively.</p>
+
+<p>I also confirmed that were no duplicate rows in the dataset or mixed type values in the columns, which might skew the results of the analysis.</p>
+
+<h2 class="section-heading">Exploring Correlations</h2>
+
+<p>Now the data was explored for any interesting relationships between the 13 numerical variables. First a pair plot and heatmap were used to visualise the correlation across all the numeric variables, ranging from internet usage to the practice of open defecation.</p>
+
+<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
+<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+
+<p>A group of variables which showed some correlation with life expectancy were singled out for further analysis. The three variables which were most interesting to me, were internet usage (as a % of population), access to basic drinking water services and adult obesity.</p>
+
+<p>Internet usage seemed like an interesting variable to me, and so I made this the focus of my hypothesis testing and further statistical analysis. </p>
+
+<h2 class="section-heading">Linear Regression</h2>
+
+<blockquote class="blockquote">“Greater internet usage within a country leads to higher life expectancies”. </blockquote>
+
+<p>This was the hypothesis I set out to test using a simple regression. I used test and training subsets of data to determine whether one could use internet usage as a predictor of life expectancy.</p>
+
+<p>Unfortunately, the correlation between internet usage and life expectancy was positive but with a great deal of variance around the trendline. In other words: the simple model was not successful.</p>
+
+<p>This led me to the conclusion that clustering may provide deeper understanding of the relationship between these two variables.</p>
+
+<h2 class="section-heading">Clustering</h2>
+
+<p>I used machine learning algorithms to perform clustering on the data. Based on scores assigned to each clustering model I chose 3 clusters which far better described the relationship between internet usage and life expectancy.</p>
+
+<p>Before resorting to clustering though, I had to standardise the values so that the algorithm could generate a satisfactory clustering of data points. In addition, I was able to find that countries on different continents exhibited differing correlations.</p>
+
+<h2 class="section-heading">Conclusion</h2>
+
+<p>Most points in cluster 1 belonged to Africa (early 2000’s), where it seems access to drinking water services was lowest.</p>
+
+<p>At low levels of internet usage, like in Africa during the early 2000’s there was practically no correlation between life expectancy and internet usage. From the mid-2000's however there began to be an increasingly stronger relationship between the two variables. In other regions of the world there were very strong positive correlations between life expectancy and internet usage.</p>
+
+<p>The conclusion was definite and clear: Higher % of internet usage was in fact linked to higher life expectancies, especially in Asia, Europe and Oceania. A precursor was access to basic drinking water services.</p>
+
+<h2 class="section-heading">The Way Forward</h2>
+
+<p>Although I was now able to show that one could in fact use levels of internet usage to predict life expectancy, it would be interesting to see by which means this occurs. Is it that access to the internet helps disseminate knowledge of foods and practices that are unhealthy and thus leads citizens to adopting healthier practices? This is a question that would be interesting to answer. A multiple regression would probably even more interesting results. This is something I have planned for the near future.</p>
+
+<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
