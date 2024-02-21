@@ -88,10 +88,27 @@ background: '/img/posts/instacart-logo-wordmark.jpg'
 
 <p>I used grouping() and transform() functions to create a column which states the maximum number of orders per unique customer id. This ‘max’ value will then show up wherever the user_id comes up.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code showing transform function">
+<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
 
 <p>Thereafter I used the loc() function again to create a loyalty flag column wherein each user_id was marked as either a ‘new’, ‘regular’ or ‘loyal’ customer based on the number of maximum orders for that customer (user_id).</p>
-<p></p>
-<p></p>
+
+<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
+<span class="caption text-muted">This is the result of creating the loyalty flag</span>
+
+<p>Using a similar process I classified customers as ‘low-’ or ‘high spender’, using the average spend for the customer segments. Then I used transform(‘median’) to classify customers by frequency of orders from the ‘order frequency’ column.</p>
+
+<h2 class="section-heading">Step 6: Visual Analysis</h2>
+
+<p>I used visual analysis to represent the frequencies I had generated for the different groupings and flags. Visual analysis helps in making patterns or trends easily recogniseable. What follow are some of these visualisations.</p>
+
+<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
+<span class="caption text-muted">This is the result of creating the loyalty flag</span>
+
+<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
+<span class="caption text-muted">This is the result of creating the loyalty flag</span>
+
+<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
+<span class="caption text-muted">This is the result of creating the loyalty flag</span>
+
 <p></p>
 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
