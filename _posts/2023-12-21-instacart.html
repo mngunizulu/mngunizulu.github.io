@@ -48,7 +48,7 @@ background: '/img/posts/instacart-logo-wordmark.jpg'
 
 <p>Next were consistency checks. Here I wrote code to search for missing values and mixed value types in the columns. I investigated missing values by creating subsets for the missing values. Some rows were deleted. Where there were missing values for the “days since prior order column I established that these were new customers. I dealt with this in the next stage.</p>
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
+<img class="img-fluid" src="/img/posts/instacart_missing_values.png" alt="Missing Values in Orders data frame">
 
 <h2 class="section-heading">Step 2: Data Wrangling</h2>
 
@@ -56,13 +56,42 @@ background: '/img/posts/instacart-logo-wordmark.jpg'
 
 <h2 class="section-heading">Step 3: Merging Data Sets</h2>
 
-<p>Before merging the datasets to create a composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
+<p>Before merging the datasets to one composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+<p>I joined the data sets using the “product_id” column since they had this in common. This could be termed a left join since the orders data frame was the ‘longest’ and could slot-in the other data frames.</p>
 
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+<img class="img-fluid" src="/img/posts/instacart_merge.png" alt="Code merging two data sets">
+<span class="caption text-muted">It's important to use a variable that two tables have in common</span>
 
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+<p>I confirmed the success of the join with a ‘True-False’ indicator. The join was successful and there were no false flags. Now it was time to begin deriving new columns/variables.</p>
 
+<img class="img-fluid" src="/img/posts/instacart_merge_success.png" alt="frequency count of full joins">
+
+<p>Now that I had the single data frame, I could begin creating customer profiles and much more. </p>
+
+<h2 class="section-heading">Step 4: Deriving new columns/variables</h2>
+
+<p>In order to answer questions and gleam new insights into the sales patterns of Instacart, I derived new columns which created labels based on certain parameters.</p>
+
+<p>I used if statements to create a new column which created a label for low, medium and high priced items.</p>
+
+<img class="img-fluid" src="/img/posts/instacart_price_ranges.png" alt="Python code shown for If Statements">
+<span class="caption text-muted">If statements are just one of the ways I could have done this</span>
+
+<p>I generated a frequency count for number of order for each hour of day. Then created labels for ‘fewest-’, ‘average-’ and ‘most orders’ in the newly created ‘busiest hours of day’ column.</p>
+
+<img class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code shown for If Statements">
+
+<p>Now we can look at further groupings…</p>
+
+<h2 class="section-heading">Step 5: Grouping Data</h2>
+
+<p>I used grouping() and transform() functions to create a column which states the maximum number of orders per unique customer id. This ‘max’ value will then show up wherever the user_id comes up.</p>
+
+<img class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code showing transform function">
+
+<p>Thereafter I used the loc() function again to create a loyalty flag column wherein each user_id was marked as either a ‘new’, ‘regular’ or ‘loyal’ customer based on the number of maximum orders for that customer (user_id).</p>
+<p></p>
+<p></p>
+<p></p>
 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
