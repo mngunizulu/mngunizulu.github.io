@@ -3,10 +3,12 @@ layout: post
 title: "Instacart - Answering Business Questions "
 subtitle: "An analysis project for an online grocer"
 date: 2023-12-21 10:45:13 -0400
-background: '/img/posts/06.jpg'
+background: '/img/posts/instacart-logo-wordmark.jpg'
 ---
 
-<p>Instacart is a real online store which makes some of its data pubicly available. Customer data was synthesised for the purpose of this project. The objective of this project was to answer complex business questions for the marketing and sales teams at Instacart.</p>
+<p>Instacart is a real online grocer that has made some of its data available for download and use. The customer dataset used as part of the analysis was synthesised and contains data on number of dependencies, income and more.</p>
+
+<p>Several important business questions were answered to allow the hypothetical marketing department to better target its customer segments, as well as gleam insights into some of the operational aspects of the business. What follows is a presentation of the steps taken to uncover these findings, how this was done and the recommendations based thereon.</p>
 
 <p>In search of answers to questions like:
     <ol>What are busiest days of the week?</ol>	
@@ -19,7 +21,7 @@ background: '/img/posts/06.jpg'
     <ol>Is there a connection between age and family status in terms of ordering habits?</ol>  
 </p>
 
-<p>To answer these questions and gleam further insights into the sales and operations of Instacart, I used Python and a host of powerful libraries</p>
+<p>To answer these questions and gleam further insights into the sales patterns of Instacart, I used Python and a host of powerful libraries</p>
 
 <p>Tools:
     <ol>
@@ -31,27 +33,30 @@ background: '/img/posts/06.jpg'
 
 <p>Data:
     <ol>
-        <li>>3 Million Rows & 23 variables</li>
         <li>open source data</li>
+        <li>>3 Million Rows</li>
+        <li>23 numeric & categorical variables</li>
         <li>Joins: Order, product, customer & Department </li>
     </ol>
 </p>
 
 <p>Let's Begin!</p>
 
-<h2 class="section-heading">Cleaning the Data</h2>
+<h2 class="section-heading">Step 1: Initial Exploration & Cleaning</h2>
 
-<p>The analysis began with consistency checks. Looking for missing values and duplicates in the data  was the first step. Also basic descriptive statistics were used to find out if there were any extreme values which may be erroneous.</p>
+<p>The first steps in this analysis involved inspecting the orders (transactions) and products data frames, to get an understanding of the shape of the imported data frames and the basic statistical descriptives.</p>
 
-<p>I also confirmed that were mixed type values in some of the columns which required correction. Jupyter Notebook was used to compile the code into neat and manageable scripts. Use was made of libraries within Python, such as seaborn, pandas, numpy and matplotlib</p>
+<p>Next were consistency checks. Here I wrote code to search for missing values and mixed value types in the columns. I investigated missing values by creating subsets for the missing values. Some rows were deleted. Where there were missing values for the “days since prior order column I established that these were new customers. I dealt with this in the next stage.</p>
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+<h2 class="section-heading">Step 2: Data Wrangling</h2>
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<p>In this step I first identified columns which were unnecessary for the analysis and dropped them from the dataframe. I also renamed some columns for easier understanding and changed the 'order_id' column from integer to string type.</p>
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+<h2 class="section-heading">Step 3: Merging Data Sets</h2>
+
+<p>Before merging the datasets to create a composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
 
 <img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
 <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>

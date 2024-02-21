@@ -27,7 +27,7 @@ background: '/img/posts/evening-by-seaside.jpg'
         <li>open source data</li>
     </ol>
 </p>
-<h2 class="section-heading">Initial Data Exploration</h2>
+<h2 class="section-heading">Step 1: Initial Data Exploration</h2>
 
 <p>The dataset was open-source data from the Worldbank. The dataset had a patchwork of missing values, which I uncovered during my initial exploratory data analysis. After identifying where these missing values were prevalent, I chose to limit the range of years from 2000 to 2015. </p>
 
@@ -38,7 +38,7 @@ background: '/img/posts/evening-by-seaside.jpg'
 
 <p>I also confirmed that were no duplicate rows in the dataset or mixed type values in the columns, which might skew the results of the analysis.</p>
 
-<h2 class="section-heading">Exploring Correlations</h2>
+<h2 class="section-heading">Step 2: Exploring Correlations</h2>
 
 <p>Now the data was explored for any interesting relationships between the 13 numerical variables. First a pair plot and heatmap were used to visualise the correlation across all the numeric variables, ranging from internet usage to the practice of open defecation.</p>
 
@@ -49,7 +49,7 @@ background: '/img/posts/evening-by-seaside.jpg'
 
 <p>Internet usage seemed like an interesting variable to me, and so I made this the focus of my hypothesis testing and further statistical analysis. </p>
 
-<h2 class="section-heading">Linear Regression</h2>
+<h2 class="section-heading">Step 3: Linear Regression</h2>
 
 <blockquote class="blockquote">“Greater internet usage within a country leads to higher life expectancies”. </blockquote>
 
@@ -62,7 +62,7 @@ background: '/img/posts/evening-by-seaside.jpg'
 
 <p>This led me to the conclusion that clustering may provide deeper understanding of the relationship between these two variables.</p>
 
-<h2 class="section-heading">Clustering</h2>
+<h2 class="section-heading"> Step 4: Clustering</h2>
 
 <p>I used machine learning algorithms to perform clustering on the data. Based on scores assigned to each clustering model I chose 3 clusters which far better described the relationship between internet usage and life expectancy.</p>
 
