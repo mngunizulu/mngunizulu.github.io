@@ -56,6 +56,8 @@ background: '/img/posts/instacart-logo-wordmark.jpg'
 
 <p>In this step I first identified columns which were unnecessary for the analysis and dropped them from the dataframe. I also renamed some columns for easier understanding and changed the 'order_id' column from integer to string type.</p>
 
+<p>At this point I was dealing with a customer table, which held sensitive personal data of customers. I deleted first and last names, and also addresses. For the purpose of this analysis only the the state in which the customer lived was interesting. I could now proceed to merging/ joining.</p>
+
 <h2 class="section-heading">Step 3: Merging Data Sets</h2>
 
 <p>Before merging the datasets to one composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
