@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Spacial Analysis of Electric Vehicle Charging Stations in Germany."
+date: 2020-01-30 23:45:13 -0400
+background: '/img/posts/05.jpg'
+---
+
+<p>Being something of an eco warrior myself, I am interested in the development of electric vehicle industry to date as well as the possible future. So I decided to search for open-source data available on this topic.</p>
+
+<p>Fortunately for me, I was able to find some interesting data which was made available from the German government through "gov.de". The dataset came in the form of a csv file. This will be a brief look at the spacial analysis I did.</p>
+
+<p>[This project is in Progress]</p>
+
+<p>Tools:
+    <ol>
+        <li>Excel</li>
+        <li>VLOOKUP, IF and OR statements</li>
+        <li>Tableau Public for visualizations</li>
+    </ol>
+</p>
+
+<p>Data:
+    <ol>
+        <li>>44,000 Rows & 18 variables</li>
+        <li>Germany (all 16 Bundesländer)</li>
+        <li>open source data</li>
+    </ol>
+</p>
+<h2 class="section-heading">Step 1: Data Cleaning</h2>
+
+<p>I imported the file to Excel. I chose to use Excel at this point, because the dataset was not very large and I had no plans as yet to perform any major statistical analyses. </p>
+
+<p>The data came with street names and house numbers, as well as Coordinate points for each charging station. Even the names of the operators were included. I decided to delete street names and addresses from the working data, because of privacy concerns. There were public as well as private operators named.</p>
+
+<p>Apart from the data which I considered sensitive, I left the names of the operators, because with the help of a formula, I was able to extract whether the owner/operator of each charging station was a private person, business or public enterprise. More on this later!</p>
+
+<p>I ended up deleting several columns which were not useful or had far too many missing values to be reliable (i.e. >10% missing values).</p>
+
+<h2 class="section-heading">Step 2: Data Wrangling</h2>
+
+<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+
+<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
+<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+
+<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+
+<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+
+<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
