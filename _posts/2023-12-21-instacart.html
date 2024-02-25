@@ -51,7 +51,7 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <p>Next were consistency checks. Here I wrote code to search for missing values and mixed value types in the columns. I investigated missing values by creating subsets for the missing values. Some rows were deleted. Where there were missing values for the “days since prior order column I established that these were new customers. I dealt with this in the next stage.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_missing_values.png" alt="Missing Values in Orders data frame">
+<img style="float: left; margin-right: 15px;" class="img-fluid" src="/img/posts/instacart_missing_values.png" alt="Missing Values in Orders data frame">
 
 <h2 class="section-heading">Step 2: Data Wrangling</h2>
 
@@ -65,12 +65,12 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <p>I joined the data sets using the “product_id” column since they had this in common. This could be termed a left join since the orders data frame was the ‘longest’ and could slot-in the other data frames.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_merge.png" alt="Code merging two data sets">
+<img style="float: right; margin-left: 15px;" class="img-fluid" src="/img/posts/instacart_merge.png" alt="Code merging two data sets">
 <span class="caption text-muted">It's important to use a variable that two tables have in common</span>
 
 <p>I confirmed the success of the join with a ‘True-False’ indicator. The join was successful and there were no false flags. Now it was time to begin deriving new columns/variables.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_merge_success.png" alt="frequency count of full joins">
+<img style="float: left; margin-right: 15px;" class="img-fluid" src="/img/posts/instacart_merge_success.png" alt="frequency count of full joins">
 
 <p>Now that I had the single data frame, I could begin creating customer profiles and much more. </p>
 
@@ -80,12 +80,12 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <p>I used if statements to create a new column which created a label for low, medium and high priced items.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_price_ranges.png" alt="Python code shown for If Statements">
+<img style="float: right; margin-left: 15px;" class="img-fluid" src="/img/posts/instacart_price_ranges.png" alt="Python code shown for If Statements">
 <span class="caption text-muted">If statements are just one of the ways I could have done this</span>
 
 <p>I generated a frequency count for number of order for each hour of day. Then created labels for ‘fewest-’, ‘average-’ and ‘most orders’ in the newly created ‘busiest hours of day’ column.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code shown for If Statements">
+<img style="float: left; margin-right: 15px;" class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code shown for If Statements">
 
 <p>Now we can look at further groupings…</p>
 
@@ -93,11 +93,11 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <p>I used grouping() and transform() functions to create a column which states the maximum number of orders per unique customer id. This ‘max’ value will then show up wherever the user_id comes up.</p>
 
-<img class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
+<img style="float: right; margin-left: 15px;" class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
 
 <p>Thereafter I used the loc() function again to create a loyalty flag column wherein each user_id was marked as either a ‘new’, ‘regular’ or ‘loyal’ customer based on the number of maximum orders for that customer (user_id).</p>
 
-<img class="img-fluid" src="/img/posts/instacart_customer_loyalty.png" alt="Python code showing transform function in use">
+<img style="float: left; margin-right: 15px;" class="img-fluid" src="/img/posts/instacart_customer_loyalty.png" alt="Python code showing transform function in use">
 <span class="caption text-muted">This is the result of creating the loyalty flag</span>
 
 <p>Using a similar process I classified customers as ‘low-’ or ‘high spender’, using the average spend for the customer segments. Then I used transform(‘median’) to classify customers by frequency of orders from the ‘order frequency’ column.</p>
