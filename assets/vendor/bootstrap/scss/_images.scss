@@ -12,6 +12,8 @@
 
 // Image thumbnails
 .img-thumbnail {
+  width: 150px;
+  height: auto;
   padding: $thumbnail-padding;
   background-color: $thumbnail-bg;
   border: $thumbnail-border-width solid $thumbnail-border-color;
