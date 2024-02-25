@@ -32,7 +32,7 @@ image_url: '/img/posts/life_expect_gdp_country.jpg'
 
 <p style="overflow: hidden;">The dataset was open-source data from the Worldbank. The dataset had a patchwork of missing values, which I uncovered during my initial exploratory data analysis. After identifying where these missing values were prevalent, I chose to limit the range of years from 2000 to 2015. </p>
 
-<img style="float: left; margin-right: 15px; width: 200px; height: auto;" class="img-fluid" src="/img/posts/missing values_life_expectancy.jpg" alt="Missing Values in Python">
+<img style="float: left; margin-right: 15px; width: 300px; height: auto;" class="img-fluid" src="/img/posts/missing values_life_expectancy.jpg" alt="Missing Values in Python">
 
 <p style="overflow: hidden;">Additionally, omitted 6 countries from the dataset, because they had far too many missing values. After this I remained with a dataset which that had less then 3% missing values. I used averages for each variable, for each country, to fill in the missing values respectively.</p>
 
@@ -42,7 +42,7 @@ image_url: '/img/posts/life_expect_gdp_country.jpg'
 
 <p>Now the data was explored for any interesting relationships between the 13 numerical variables. First a pair plot and heatmap were used to visualise the correlation across all the numeric variables, ranging from internet usage to the practice of open defecation.</p>
 
-<img style="float: right; margin-left: 15px; width: 200px; height: auto;" class="img-fluid" src="/img/posts/life_expect_heatmap.png" alt="Heatmap of 13 numeric variables">
+<img style="float: right; margin-left: 15px; width: 300px; height: auto;" class="img-fluid" src="/img/posts/life_expect_heatmap.png" alt="Heatmap of 13 numeric variables">
 <span class="caption text-muted">A heatmap is a great way to get a visual representation of correlations between numeric variables</span>
 
 <p>A group of variables which showed some correlation with life expectancy were singled out for further analysis. The three variables which were most interesting to me, were internet usage (as a % of population), access to basic drinking water services and adult obesity.</p>
@@ -57,7 +57,7 @@ image_url: '/img/posts/life_expect_gdp_country.jpg'
 
 <p>Unfortunately, the correlation between internet usage and life expectancy was positive but with a great deal of variance around the trendline. In other words: the simple model was not successful.</p>
 
-<img style="float: left; margin-right: 15px; width: 200px; height: auto;" class="img-fluid" src="/img/posts/life_expect_internet_scatterplot.jpg" alt="Scatterplot showing life expectancy and internet usage">
+<img style="float: left; margin-right: 15px; width: 300px; height: auto;" class="img-fluid" src="/img/posts/life_expect_internet_scatterplot.jpg" alt="Scatterplot showing life expectancy and internet usage">
 <span class="caption text-muted">Although positive, the correlation is not perfect enough for us to predict life expectancy using internet usage</span>
 
 <p>This led me to the conclusion that clustering may provide deeper understanding of the relationship between these two variables.</p>
@@ -66,14 +66,14 @@ image_url: '/img/posts/life_expect_gdp_country.jpg'
 
 <p>I used machine learning algorithms to perform clustering on the data. Based on scores assigned to each clustering model I chose 3 clusters which far better described the relationship between internet usage and life expectancy.</p>
 
-<img style="float: right; margin-left: 15px; width: 200px; height: auto;" class="img-fluid" src="/img/posts/clustering_life_expectancy.png" alt="Scatterplot showing life expectancy and internet clustered">
+<img style="float: right; margin-left: 15px; width: 300px; height: auto;" class="img-fluid" src="/img/posts/clustering_life_expectancy.png" alt="Scatterplot showing life expectancy and internet clustered">
 <span class="caption text-muted">Clustering of data points allows us to use algorithmic machine learning to find suitable data groupings</span>
 
 <p>Before resorting to clustering though, I had to standardise the values so that the algorithm could generate a satisfactory clustering of data points. In addition, I was able to find that countries on different continents exhibited differing correlations.</p>
 
 <h2 class="section-heading">Conclusion</h2>
 
-<img style="float: left; margin-right: 15px; width: 200px; height: auto;" class="img-fluid" src="/img/posts/life_expect_clusters_frequency.png" alt="Scatterplot showing life expectancy and internet clustered">
+<img style="float: left; margin-right: 15px; width: 300px; height: auto;" class="img-fluid" src="/img/posts/life_expect_clusters_frequency.png" alt="Scatterplot showing life expectancy and internet clustered">
 <span class="caption text-muted">Looking at the frequency of clusters in columns allows us to find underlying differences</span>
 
 <p>Most points in cluster 1 belonged to Africa (early 2000’s), where it seems access to drinking water services was lowest.</p>
