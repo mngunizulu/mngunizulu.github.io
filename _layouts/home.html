@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<!-- Hover-Effect -->
+<style>
+  .post-preview {
+    transition: transform 0.3s ease-in-out; /* Adding a smooth transition effect */
+  }
+
+  .post-preview:hover {
+    transform: scale(1.1); /* Scale the element to 110% of its original size on hover */
+  }
+</style>
 
 <!-- Page Header -->
 {% if page.background %}
@@ -32,14 +42,13 @@ layout: default
 
         <!-- Paragraph about yourself -->
         
-        
         <div>
           <p>Hello, I'm Mnguni. I have a Bachelor's degree in Commerce with a focus on financial analysis. I have worked in production as well as e-commerce. In my Career Foundry course I developed an expertise in data cleaning, wrangling and visualisation using Excel, SQl and Python.</p>
           
           <p>I'm passionate about historcial and predictive analyses as well as machine learning. Feel free to explore my portfolio page to learn more about me and the projects I like to work on. If you have any questions or suggestions, don't hesitate to contact me!</p>
           <div style="width: 100%">
-            <div>
-              <p style="text-align: center;">My Data Skills:
+            <div style="text-align: center;">
+              <p>My Data Skills:
                 <ul style="list-style-type:disc">
                 <li>Data Cleaning & Preparation</li>	
                 <li>Data Wrangling</li>    	
@@ -52,8 +61,8 @@ layout: default
                 </ul>
               </p>
             </div>
-            <div>
-              <p style="text-align: center;">My Toolset:
+            <div style="text-align: center;">
+              <p>My Toolset:
               <ul style="list-style-type:disc">
               <li>PostgreSQL</li>	
               <li>Microsoft Excel</li>    	
