@@ -7,13 +7,13 @@ background: '/img/posts/charging_station_de.jpg'
 image_url: '/img/posts/vehicle_charging_stations_DE.jpg'
 ---
 
-<p>Being something of an eco warrior myself, I am interested in the development of electric vehicle industry to date as well as the possible future. So I decided to search for open-source data available on this topic.</p>
+<p style="text-align: justify;">Being something of an eco warrior myself, I am interested in the development of electric vehicle industry to date as well as the possible future. So I decided to search for open-source data available on this topic.</p>
 
-<p>Fortunately for me, I was able to find some interesting data which was made available from the German government through "gov.de". The dataset came in the form of a csv file. This will be a brief look at the spacial analysis I did.</p>
+<p style="text-align: justify;">Fortunately for me, I was able to find some interesting data which was made available from the German government through "gov.de". The dataset came in the form of a csv file. This will be a brief look at the spacial analysis I did.</p>
 
-<p>[This project is in Progress]</p>
+<p style="text-align: justify;">[This project is in Progress]</p>
 
-<p>Tools:
+<p style="text-align: justify;">Tools:
     <ol>
         <li>Excel</li>
         <li>VLOOKUP, IF and OR statements</li>
@@ -21,7 +21,7 @@ image_url: '/img/posts/vehicle_charging_stations_DE.jpg'
     </ol>
 </p>
 
-<p>Data:
+<p style="text-align: justify;">Data:
     <ol>
         <li>>44,000 Rows & 18 variables</li>
         <li>Germany (all 16 Bundesländer)</li>
@@ -30,17 +30,17 @@ image_url: '/img/posts/vehicle_charging_stations_DE.jpg'
 </p>
 <h2 class="section-heading">Step 1: Data Cleaning</h2>
 
-<p>I imported the file to Excel. I chose to use Excel at this point, because the dataset was not very large and I had no plans as yet to perform any major statistical analyses. </p>
+<p style="text-align: justify;">I imported the file to Excel. I chose to use Excel at this point, because the dataset was not very large and I had no plans as yet to perform any major statistical analyses. </p>
 
-<p>The data came with street names and house numbers, as well as Coordinate points for each charging station. Even the names of the operators were included. I decided to delete street names and addresses from the working data, because of privacy concerns. There were public as well as private operators named.</p>
+<p style="text-align: justify;">The data came with street names and house numbers, as well as Coordinate points for each charging station. Even the names of the operators were included. I decided to delete street names and addresses from the working data, because of privacy concerns. There were public as well as private operators named.</p>
 
-<p>Apart from the data which I considered sensitive, I left the names of the operators, because with the help of a formula, I was able to extract whether the owner/operator of each charging station was a private person, business or public enterprise. More on this later!</p>
+<p style="text-align: justify;">Apart from the data which I considered sensitive, I left the names of the operators, because with the help of a formula, I was able to extract whether the owner/operator of each charging station was a private person, business or public enterprise. More on this later!</p>
 
-<p>I ended up deleting several columns which were not useful or had far too many missing values to be reliable (i.e. >10% missing values).</p>
+<p style="text-align: justify;">I ended up deleting several columns which were not useful or had far too many missing values to be reliable (i.e. >10% missing values).</p>
 
 <h2 class="section-heading">Step 2: Data Wrangling</h2>
 
-<p>After the basic inspection and cleaning up of the dataset, I noticed that the zip codes (PLZ) were either broken or imported into Excel incorrectly. WIth the help of a concatenate funtion I remedied this problem.</p>
+<p style="text-align: justify;">After the basic inspection and cleaning up of the dataset, I noticed that the zip codes (PLZ) were either broken or imported into Excel incorrectly. WIth the help of a concatenate funtion I remedied this problem.</p>
 
 <img style="border: 5px solid #555" class="img-fluid" src="/img/maintenance-2422173_1280.png" alt="Under Construction Image">
 <span class="caption text-muted">Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Gerd Altmann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Pixabay</a></span>
