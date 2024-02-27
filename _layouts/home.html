@@ -13,6 +13,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
+            <img style="border: 5px solid #555; border-radius: 50%; width: 200px; height: auto; display: block; margin: 0 auto;" class="img-fluid" src="/img/posts/headshot.jpeg" alt="Profile Picture">
             <h1>{{ site.title }}</h1>
             {% if site.description %}
             <span class="subheading">{{ site.description }}</span>
@@ -33,9 +34,6 @@ layout: default
         
         
         <div>
-
-          <img style="border: 5px solid #555; display: block; margin: 0 auto;" class="img-fluid" src="/img/posts/headshot.jpeg" alt="Profile Picture">
-          
           <p>Hello, I'm Mnguni. I have a Bachelor's degree in Commerce with a focus on financial analysis. I have worked in production as well as e-commerce. In my Career Foundry course I developed an expertise in data cleaning, wrangling and visualisation using Excel, SQl and Python.</p>
           
           <p>I'm passionate about historcial and predictive analyses as well as machine learning. Feel free to explore my portfolio page to learn more about me and the projects I like to work on. If you have any questions or suggestions, don't hesitate to contact me!.</p>
@@ -63,10 +61,10 @@ layout: default
 
           <a href="/CV_compressed/Zulu_Mnguni_Resume.zip" class="btn btn-primary" download>Download My Resume</a>
           <a href="/CV_compressed/Zulu_Mnguni_Lebenslauf.zip" class="btn btn-primary" download>Lebenslauf herunterladen</a>
-        <br>
         </div>
 
-
+        <br>
+        <br>
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
 
