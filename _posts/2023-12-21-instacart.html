@@ -7,9 +7,9 @@ background: '/img/posts/instacart-logo-wordmark.jpg'
 image_url: '/img/posts/instacart_hist_order_by_hour.png'
 ---
 
-<p>Instacart is a real online grocer that has made some of its data available for download and use. The customer dataset used as part of the analysis was synthesised and contains data on number of dependencies, income and more.</p>
+<p style="text-align: justify;">Instacart is a real online grocer that has made some of its data available for download and use. The customer dataset used as part of the analysis was synthesised and contains data on number of dependencies, income and more.</p>
 
-<p>Several important business questions were answered to allow the hypothetical marketing department to better target its customer segments, as well as gleam insights into some of the operational aspects of the business. What follows is a presentation of the steps taken to uncover these findings, how this was done and the recommendations based thereon.</p>
+<p style="text-align: justify;">Several important business questions were answered to allow the hypothetical marketing department to better target its customer segments, as well as gleam insights into some of the operational aspects of the business. What follows is a presentation of the steps taken to uncover these findings, how this was done and the recommendations based thereon.</p>
 
 <p>In search of answers to questions like:
     <ul style="list-style-type:disc">
@@ -24,7 +24,7 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
     </ul>
 </p>
 
-<p>To answer these questions and gleam further insights into the sales patterns of Instacart, I used Python and a host of powerful libraries</p>
+<p style="text-align: justify;">To answer these questions and gleam further insights into the sales patterns of Instacart, I used Python and a host of powerful libraries</p>
 
 <p>Tools:
     <ol>
@@ -47,64 +47,64 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <h2 class="section-heading">Step 1: Initial Exploration & Cleaning</h2>
 
-<p>The first steps in this analysis involved inspecting the orders (transactions) and products data frames, to get an understanding of the shape of the imported data frames and the basic statistical descriptives.</p>
+<p style="text-align: justify;">The first steps in this analysis involved inspecting the orders (transactions) and products data frames, to get an understanding of the shape of the imported data frames and the basic statistical descriptives.</p>
 
-<p>Next were consistency checks. Here I wrote code to search for missing values and mixed value types in the columns. I investigated missing values by creating subsets for the missing values. Some rows were deleted. Where there were missing values for the “days since prior order column I established that these were new customers. I dealt with this in the next stage.</p>
+<p style="text-align: justify;">Next were consistency checks. Here I wrote code to search for missing values and mixed value types in the columns. I investigated missing values by creating subsets for the missing values. Some rows were deleted. Where there were missing values for the “days since prior order column I established that these were new customers. I dealt with this in the next stage.</p>
 
 <img style="float: left; margin-right: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_missing_values.png" alt="Missing Values in Orders data frame">
 
 <h2 class="section-heading">Step 2: Data Wrangling</h2>
 
-<p>In this step I first identified columns which were unnecessary for the analysis and dropped them from the dataframe. I also renamed some columns for easier understanding and changed the 'order_id' column from integer to string type.</p>
+<p style="text-align: justify;">In this step I first identified columns which were unnecessary for the analysis and dropped them from the dataframe. I also renamed some columns for easier understanding and changed the 'order_id' column from integer to string type.</p>
 
-<p>At this point I was dealing with a customer table, which held sensitive personal data of customers. I deleted first and last names, and also addresses. For the purpose of this analysis only the the state in which the customer lived was interesting. I could now proceed to merging/ joining.</p>
+<p style="text-align: justify;">At this point I was dealing with a customer table, which held sensitive personal data of customers. I deleted first and last names, and also addresses. For the purpose of this analysis only the the state in which the customer lived was interesting. I could now proceed to merging/ joining.</p>
 
 <h2 class="section-heading">Step 3: Merging Data Sets</h2>
 
-<p>Before merging the datasets to one composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
+<p style="text-align: justify;">Before merging the datasets to one composite table, I confirmed the shapes of the data sets. This means looking at the number of rows and columns in each, so that I can choose the appropriate type of join.</p>
 
-<p>I joined the data sets using the “product_id” column since they had this in common. This could be termed a left join since the orders data frame was the ‘longest’ and could slot-in the other data frames.</p>
+<p style="text-align: justify;">I joined the data sets using the “product_id” column since they had this in common. This could be termed a left join since the orders data frame was the ‘longest’ and could slot-in the other data frames.</p>
 
 <img style="float: right; margin-left: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_merge.png" alt="Code merging two data sets">
 <span class="caption text-muted">It's important to use a variable that two tables have in common</span>
 
-<p>I confirmed the success of the join with a ‘True-False’ indicator. The join was successful and there were no false flags. Now it was time to begin deriving new columns/variables.</p>
+<p style="text-align: justify;">I confirmed the success of the join with a ‘True-False’ indicator. The join was successful and there were no false flags. Now it was time to begin deriving new columns/variables.</p>
 
 <img style="float: left; margin-right: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_merge_success.png" alt="frequency count of full joins">
 
-<p style="overflow: hidden;">Now that I had the single data frame, I could begin creating customer profiles and much more. </p>
+<p style="overflow: hidden; text-align: justify;">Now that I had the single data frame, I could begin creating customer profiles and much more. </p>
 
 <h2 class="section-heading">Step 4: Deriving new columns/variables</h2>
 
-<p>In order to answer questions and gleam new insights into the sales patterns of Instacart, I derived new columns which created labels based on certain parameters.</p>
+<p style="text-align: justify;">In order to answer questions and gleam new insights into the sales patterns of Instacart, I derived new columns which created labels based on certain parameters.</p>
 
-<p style="overflow: hidden;">I used if statements to create a new column which created a label for low, medium and high priced items.</p>
+<p style="overflow: hidden; text-align: justify;">I used if statements to create a new column which created a label for low, medium and high priced items.</p>
 
 <img style="float: right; margin-left: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_price_ranges.png" alt="Python code shown for If Statements">
 <span class="caption text-muted">If statements are just one of the ways I could have done this</span>
 
-<p>I generated a frequency count for number of order for each hour of day. Then created labels for ‘fewest-’, ‘average-’ and ‘most orders’ in the newly created ‘busiest hours of day’ column.</p>
+<p style="text-align: justify;">I generated a frequency count for number of order for each hour of day. Then created labels for ‘fewest-’, ‘average-’ and ‘most orders’ in the newly created ‘busiest hours of day’ column.</p>
 
 <img style="float: left; margin-right: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_order_hour_of_day.png" alt="Python code shown for If Statements">
 
-<p>Now we can look at further groupings…</p>
+<p style="text-align: justify;">Now we can look at further groupings…</p>
 
 <h2 class="section-heading">Step 5: Grouping Data</h2>
 
-<p>I used grouping() and transform() functions to create a column which states the maximum number of orders per unique customer id. This ‘max’ value will then show up wherever the user_id comes up.</p>
+<p style="text-align: justify;">I used grouping() and transform() functions to create a column which states the maximum number of orders per unique customer id. This ‘max’ value will then show up wherever the user_id comes up.</p>
 
 <img style="float: right; margin-left: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_transform_max.png" alt="Python code showing transform function in use">
 <br>
-<p>Thereafter I used the loc() function again to create a loyalty flag column wherein each user_id was marked as either a ‘new’, ‘regular’ or ‘loyal’ customer based on the number of maximum orders for that customer (user_id).</p>
+<p style="text-align: justify;">Thereafter I used the loc() function again to create a loyalty flag column wherein each user_id was marked as either a ‘new’, ‘regular’ or ‘loyal’ customer based on the number of maximum orders for that customer (user_id).</p>
 
 <img style="float: left; margin-right: 15px; border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_customer_loyalty.png" alt="Python code showing transform function in use">
 <span class="caption text-muted">This is the result of creating the loyalty flag</span>
 
-<p>Using a similar process I classified customers as ‘low-’ or ‘high spender’, using the average spend for the customer segments. Then I used transform(‘median’) to classify customers by frequency of orders from the ‘order frequency’ column.</p>
+<p style="text-align: justify;">Using a similar process I classified customers as ‘low-’ or ‘high spender’, using the average spend for the customer segments. Then I used transform(‘median’) to classify customers by frequency of orders from the ‘order frequency’ column.</p>
 
 <h2 class="section-heading">Step 6: Visual Analysis</h2>
 
-<p>Once the grouping were done I used visual analysis to represent the frequencies I had generated for the different groupings and flags. Visual analysis helps in making patterns or trends easily recogniseable. What follow are some of these visualisations.</p>
+<p style="text-align: justify;">Once the grouping were done I used visual analysis to represent the frequencies I had generated for the different groupings and flags. Visual analysis helps in making patterns or trends easily recogniseable. What follow are some of these visualisations.</p>
 
 <img style="border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_hist_order_by_hour.png" alt="Histogram showing number of orders per hour of day">
 <span class="caption text-muted">The above chart shows the number of orders for each hour of the day.It shows that the most orders are made 10am and the least are made at 3am</span>
@@ -125,11 +125,11 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 <img style="border: 5px solid #555" class="img-fluid" src="/img/posts/instacart_stacked_chart_customers_regions.png" alt="Bar Chart showing distribution of customer profile per state">
 <span class="caption text-muted">The bar chart shows the distribution of different customer profiles in the different regions of the US.</span>
 
-<p>What can be seen for all the different customer profiles, is that the South (in green) also generates the most orders. Middle-income, middled aged parents are the customer group that spend more than any other defined customer group (excluding 'other'). Young, low-income parents are the second largest group. It seems that parents generate more orders.</p>
+<p style="text-align: justify;">What can be seen for all the different customer profiles, is that the South (in green) also generates the most orders. Middle-income, middled aged parents are the customer group that spend more than any other defined customer group (excluding 'other'). Young, low-income parents are the second largest group. It seems that parents generate more orders.</p>
 
 <h2 class="section-heading">Recommendations</h2>
 
-<p>In conclusion I can offer reccomendations based on the questions first posed at the beginning of the analysis:
+<p style="text-align: justify;">In conclusion I can offer reccomendations based on the questions first posed at the beginning of the analysis:
     <ul style="list-style-type:disc">
     <li>The most orders are placed on a in descending order: Saturday, Sunday, Friday, Monday, Thursday, Tuesday, Wednesday.</li>	
     <li>The most orders are made 10am and the least are made at 3am.</li>    	
@@ -142,7 +142,7 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
     </ul>
 </p>
 
-<p>This analysis project was especially interesting because it highlighted the power and use of Python for processing large data sets. One challeng was writing code which my machine could implement efficiently. Overall it was a wonderful project.</p>
+<p style="text-align: justify;">This analysis project was especially interesting because it highlighted the power and use of Python for processing large data sets. One challeng was writing code which my machine could implement efficiently. Overall it was a wonderful project.</p>
 
 <a href="https://github.com/mngunizulu/Data-Analysis-Portfolio/blob/main/Portfolio%20Projects/Life%20Expectancy/Life%20Expectancy.zip" class="btn btn-primary" download>Download Project Folder</a>
 
