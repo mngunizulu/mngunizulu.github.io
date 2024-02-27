@@ -71,9 +71,9 @@ layout: default
         <br>
         <br>
         <!-- Home Post List -->
+        <h2 style="background-image: url('/img/posts/Video-Game-PNG.jpg'); background-size: cover; color: white; padding: 5px;">Projects</h2>
         {% for post in site.posts limit : 5 %}
     
-        <h2 style="background-image: url('/img/posts/Video-Game-PNG.jpg'); background-size: cover; color: white; padding: 20px;">Projects</h2>
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <img style="border: 5px solid #555" src="{{ post.image_url }}" alt="{{ post.title }}" class="img-thumbnail">
