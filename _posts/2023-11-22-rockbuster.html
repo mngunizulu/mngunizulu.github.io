@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Rockbuster Video Rentals - Analysis for a changing business model "
+subtitle: "Tools: PostgreSQL, Tableau"
+date: 2023-12-21 10:45:13 -0400
+background: '/img/posts/Video-Game-PNG.png'
+image_url: '/img/posts/instacart_hist_order_by_hour.png'
+---
+
+<p style="text-align: justify;">Rockbuster Stealth LLC is a movie rental business which has failed to innovate and adapt with the times. They werere still renting videos online!</p>
+
+<p style="text-align: justify;">Fortunately for them, they realised thier error and decided to make a change to compete with streaming services. But before they launched, they wanted to use their historical data (in a relational database) to draw insights to develop a focused strategy.</p>
+
+<p style="text-align: justify;">Rockbuster is a fictional business, created for my Career Foundry course, but the queries used are real, and the insights, well, insightful.</p>
+
+<p>Tools:
+    <ul>
+        <li>Excel (queries to CSV for visuals in Tableau)</li>
+        <li>PostgreSQL (Queries, Subqueries, CTEs, Joins)</li>
+        <li>Tableau Public for visualizations</li>
+    </ul>
+</p>
+
+<p>Data:
+    <ul>
+        <li>Relational Database</li>
+        <li>2 Fact tables & 13 Dimension tables</li>
+    </ul>
+</p>
+<h2 class="section-heading">Step 1: Getting to know the Data</h2>
+
+<p style="text-align: justify;">I began by creating a diagram of the datatables, which exhibited a snowflake pattern. I also created a data dictionary so that I would have a quick reference for the more complicated joins later on. </p>
+
+<p style="text-align: justify;">I examined the structure of the tables in the database as well as the type of data contained within them</p>
+
+<p style="text-align: justify;">Thereafter, I searched for any duplicate records or missing values in the customer and film tables, because these would have skewed the results. I confirmed that there were neither.</p>
+
+<p style="text-align: justify;">Finally I queried to obtain basic descriptive for the numerical columns in the film table. These include MInimum, Maximum and Averages for the respective columns.</p>
+
+<h2 class="section-heading">Step 2: Defining Questions</h2>
+
+<p style="text-align: justify;">To give direction to the project, I began by defining questions which I would like to answer.</p>
+
+<p>In search of answers to questions like:
+    <ul style="list-style-type:disc;">
+    <li>What are the average/ maximum movie rental rates?</li>	
+    <li>What are the average movie rental durations?</li>    	
+    <li>Which countries contribute most to revenue?	</li>
+    <li>Which genres contribute the most to revenue?</li>	
+    <li>Where do we find our most loyal customers by spend?</li>	 
+    </ul>
+</p>
+
+<h2 class="section-heading">Step 3: Results</h2>
+
+<p style="text-align: justify;">For a closer look at some of the queries I used, you can download the project folder. The button for which is at the bottom of this case study. What follows is an overview of results.</p>
+
+<img style="border: 5px solid #555" class="img-fluid" src="/img/maintenance-2422173_1280.png" alt="Vertical bar chart of revenue per country">
+
+<p>The countries generating the most revenue for Rockbuster are India, China and USA in that order.</p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<img style="border: 5px solid #555" class="img-fluid" src="/img/maintenance-2422173_1280.png" alt="Under Construction Image">
+<span class="caption text-muted">Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Gerd Altmann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Pixabay</a></span>
+
+
+<p>Placeholder text by <a href="http://spaceipsum.com/">Mnguni Zulu</a>. Photograph by <a href="https://pixabay.com/users/akrebs60-5424918/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4632700">A. Krebs</a>.</p>
