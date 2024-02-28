@@ -57,16 +57,39 @@ image_url: '/img/posts/instacart_hist_order_by_hour.png'
 
 <p style="text-align: justify;">For a closer look at some of the queries I used, you can download the project folder. The button for which is at the bottom of this case study. What follows is an overview of results.</p>
 
-<img style="border: 5px solid #555" class="img-fluid" src="/img/maintenance-2422173_1280.png" alt="Vertical bar chart of revenue per country">
+<img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_top_countries_revenue.png" alt="Vertical bar chart of revenue per country">
 
-<p>The countries generating the most revenue for Rockbuster are India, China and USA in that order.</p>
+<p style="text-align: justify;">The countries generating the most revenue for Rockbuster are India, China and USA in that order. This is relevant when management makes future considerations for which geographic markets to target and what prices to charge for their service.</p>
 
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<img style="border: 5px solid #555" class="img-fluid" src="/img/maintenance-2422173_1280.png" alt="Under Construction Image">
-<span class="caption text-muted">Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Gerd Altmann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2422173">Pixabay</a></span>
+<p style="text-align: justify;">Next, I looked for the top cities, in the top countries, as well as the top customers. This required the use of a subquery.</p>
 
+<img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_top_clients_cities.png" alt="Table showing top, countries, top cities and customers">
 
-<p>Placeholder text by <a href="http://spaceipsum.com/">Mnguni Zulu</a>. Photograph by <a href="https://pixabay.com/users/akrebs60-5424918/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4632700">A. Krebs</a>.</p>
+<p style="text-align: justify;">So now that I new which were the top countries, and the respective top cities and customers in those countries, I wanted know which genres generated the highest revenue. Also of interest were the ratings which were most popular.</p>
+
+<img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_sql_pie_genres.png" alt="Pie chart showing revenue per genre">
+
+<img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_sql_revenue_ratings.png" alt="Bar Chart showing revenue per rating category">
+<span class="caption text-muted">We see that PG-13 movies generate the most and G, the least.</span>
+
+<p style="text-align: justify;">We can see that with the help of such a chart, management can make an informed decision when deciding on which movies to spend more on, when acquiring movie inventory for their new streaming service.</p>
+
+<h2 class="section-heading">Step 4: Recommendations</h2>
+
+<p style="text-align: justify;">Based on the results of the analysis I could then answer the questions which I had posed at the beginning of this project. I created a Power Point which communicated these results in a user-friendly way.</p>
+
+<p>Recommendations and Way Forward:
+    <ul style="list-style-type:disc;">
+    <li>Focus on growing customer bases in the top 10 countries and cities.</li>	
+    <li>Expand our movie selection in the most popular genres and ratings.</li>    	
+    <li>Update our selection of movies to include latest movies.</li>
+    <li>Further temporal anylsis could be done to investigate <b>seasonality</b> of movie rental.</li>	
+    <li>Collect data on the ages of our customers, to investigate ages of our target market.</li>	 
+    </ul>
+</p>
+
+<h2 class="section-heading">Step 5: Reflections</h2>
+
+<p style="text-align: justify;">This project was a lot of fun. One of my favourite aspects was the use of joins, CTEs and subqueries. Their importance becomes immediately obvious when attempting to answer specific questions.</p>
+
+<p>Placeholder text by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>. Photograph by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>.</p>
