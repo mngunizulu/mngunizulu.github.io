@@ -52,16 +52,17 @@ image_url: '/img/maintenance-2422173_1280.png'
 
 <h2 class="section-heading">Step 3: Integration</h2>
 
-<p style="text-align: justify;">To be able to use a data set for analysis one must often integrate/ merge data using some common key or variable. This is because we seldom find a complete data set which is ready for use as is. Thi is what this step was about.</p>
-
-<img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_top_countries_revenue.png" alt="Excerpt of Spreadsheet showing data mapping">
+<p style="text-align: justify;">To be able to use a data set for analysis one must often integrate/ merge data using some common key or variable. This is because we seldom find a complete data set which is ready for use as is. This is what this step was about.</p>
 
 <p style="text-align: justify;">I began by mapping the data, trying to find commonalities between the two data sets. I identified 'state' and year as common columns. But the US Census data had records for each county in each state, whereas the Influenza Deaths data was only for each state. This was a 'granularity' issue.</p>
 
-<p style="text-align: justify;">I created a pivot table for the US Census data, which summed up the records for each state. Then I used a VLOOKUP to integrate the data sets into one. Knowing that I would perform hypothesis testing, I preemptively grouped deaths and popuations into 65+ and < 65 years of age.</p>
+<p style="text-align: justify;">I created a pivot table for the US Census data, which summed up the records for each state. Knowing that I would perform hypothesis testing, I preemptively grouped deaths and popuations into 65+ and < 65 years of age.</p>
 
-<img style="float: right; margin-left: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_top_clients_cities.png" alt="Table showing top, countries, top cities and customers">
+<img style="float: right; margin-left: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_pivot_deaths.png" alt="Excerpt of spreadsheet showing pivot table">
 
+<p style="text-align: justify;">Now the data was ready for integration. So I used a VLOOKUP to integrate the data sets into one.</p>
+
+<img style="float: right; margin-left: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_new_data_vlookup.png" alt="Excerpt of spreadsheet showing VLOOKUP">
 
 <h2 class="section-heading">Step 4: Statistical Analysis & Testing</h2>
 
@@ -69,32 +70,3 @@ image_url: '/img/maintenance-2422173_1280.png'
 
 <img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_sql_pie_genres.png" alt="Pie chart showing revenue per genre">
 <span class="caption text-muted">The different movie genres generate about the same revenue</span>
-<br>
-<br>
-
-<img style="border: 5px solid #555" class="img-fluid" src="/img/posts/rockbuster_sql_revenue_ratings.png" alt="Bar Chart showing revenue per rating category">
-<span class="caption text-muted">We see that PG-13 movies generate the most and G, the least.</span>
-
-<p style="text-align: justify;">We can see that with the help of such a chart, management can make an informed decision when deciding on which movies to spend more on, when acquiring movie inventory for their new streaming service.</p>
-
-<h2 class="section-heading">Step 4: Recommendations</h2>
-
-<p style="text-align: justify;">Based on the results of the analysis I could then answer the questions which I had posed at the beginning of this project. I created a Power Point which communicated these results in a user-friendly way.</p>
-
-<p><b>Recommendations and Way Forward:</b>
-    <ul style="list-style-type:disc;">
-    <li>Focus on growing customer bases in the top 10 countries and cities.</li>	
-    <li>Expand our movie selection in the most popular genres and ratings.</li>    	
-    <li>Update our selection of movies to include latest movies.</li>
-    <li>Further temporal anylsis could be done to investigate <b>seasonality</b> of movie rental.</li>	
-    <li>Collect data on the ages of our customers, to investigate ages of our target market.</li>	 
-    </ul>
-</p>
-
-<h2 class="section-heading">Step 5: Reflections</h2>
-
-<p style="text-align: justify;">This project was a lot of fun. One of my favourite aspects was the use of joins, CTEs and subqueries. Their importance becomes immediately obvious when attempting to answer specific questions.</p>
-
-<a href="https://github.com/mngunizulu/Data-Analysis-Portfolio/blob/main/Portfolio%20Projects/Rockbuster%20Stealth/Rockbuster%20Stealth.zip" class="btn btn-primary" download>Download Project Folder</a>
-
-<p>Placeholder text by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>. Photograph by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>.</p>
