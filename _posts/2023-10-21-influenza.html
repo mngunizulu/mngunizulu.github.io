@@ -70,17 +70,50 @@ image_url: '/img/maintenance-2422173_1280.png'
 
 <h2 class="section-heading">Step 4: Statistical Analysis & Testing</h2>
 
-<p style="text-align: center;">H0:    µInfluenza mortality 65+ years = µInfluenza mortality <65 years </p>
-<p style="text-align: center;">HA:    µInfluenza mortality 65+ years <> µInfluenza mortality <65 years </p>
+<p style="text-align: center;"><b>H0:    µInfluenza mortality 65+ years = µInfluenza mortality <65 years</b></p>
+<p style="text-align: center;"><b>HA:    µInfluenza mortality 65+ years <> µInfluenza mortality <65 years</b></p>
 
-<p style="text-align: justify;">The null and alternative hypothesis are stated above. I was trying to test whether the two groups had the same risk of death/hospitalisation from influenza. This will be a two-tailed test, because we interested in knowing whether the average mortality rate is higher or lower for those in the age group 65+.</p>
-
-<p style="text-align: justify;">The test produced a result with a p-value= 1,50E-171. The p-value is much lower than the alpha. This means the groups are significantly different.</p>
+<p style="text-align: justify;">The null and alternative hypothesis are stated above. I was trying to test whether the two groups had the same risk of death/hospitalisation from influenza. This was a two-tailed test, because I was interested in knowing whether the average mortality rate is higher or lower for those in the age group 65+.</p>
 
 <img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_stats_test.png" alt="Excerpt showing t-test">
 
-<p style="text-align: justify;">The null hypothesis can be rejected. At a 95% confidence level I found significant differences between the average Influenza mortality rates for those aged  <65 years of age and those  65+ years of age. Because of this strong result, I continued my analysis to identify where the age group of people 65 and above are a higher proportion of total poulation.</p>
+<p style="text-align: justify;">The test produced a result with a p-value= 1,50E-171 (rounded). The p-value is much lower than the alpha. This means the groups are significantly different.</p>
 
-<p style="text-align: justify;"></p>
-<p style="text-align: justify;"></p>
+<img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_scatter_mortality_ages.png" alt="Scatterplot for mortality rates">
+<span class="caption text-muted">Even the mortality rates have little positive correlation</span>
 
+<p style="text-align: justify;">The null hypothesis was rejected. At a 95% confidence level I found significant differences between the average Influenza mortality rates for those aged  <65 years and those  65+ years of age. Because of this strong result, I continued my analysis to identify <b>where</b> the age group of people 65 and above are a higher proportion of total poulation.</p>
+
+<h2 class="section-heading">Step 5: Visual Analysis</h2>
+
+<img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_stats_test.png" alt="Temporal chart for Influenza deaths">
+
+<p style="text-align: justify;">The objective of the project was to create recommendations for the allocation of temporary staff. This means placing them at the right time and with focus on priority areas. I grouped the 50 US states into their geographic areas and performed a temporal analysis with the aid of Tableau. The results were clear. The number of influenza deaths increases rapidly in December and spikes in January.</p>
+
+<img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_map_deaths.png" alt="Chlorpleth and sybol maps">
+
+<p style="text-align: justify;">I created a variety of charts but I chose a chloropleth map with symbols in this case study (you can see the full storyboard on Tableau). The darker the blue, the greater the number of influenza deaths. The greater the circle in the state, the larger the total population of the state, and the lighter the circle, the greater the number of influenza deaths for age group 65+. We now had our 'hot zones'.</p>
+
+<h2 class="section-heading">Step 6: Recommendations</h2>
+
+<p><b>Priority states (excerpt):</b>
+    <ul>
+        <li>California</li>
+        <li>New York</li>
+        <li>Texas</li>
+        <li>Pennsylvania</li>
+        <li>Florida</li>
+        <li>Illinois</li>
+        <li>Ohio</li>
+        <li>North Carolina</li>
+        <li>Michigan</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">It was lso recommended that staff be deployed latest November, so that the swell of patients will not immediately overwhelm staff. Additionally, staff should be vaccinated as this limited abseenteism and gave greater confidence to staff.</p>
+
+
+<a href="https://github.com/mngunizulu/Data-Analysis-Portfolio/blob/main/Portfolio%20Projects/Preparing%20for%20Influenza%20Season/Preparing%20for%20Influenza%20Season.zip" class="btn btn-primary" download>Download Project Folder</a>
+
+
+<p>Placeholder text by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>. Photographs by <a href="https://mngunizulu.github.io/">Mnguni Zulu</a>.</p>
