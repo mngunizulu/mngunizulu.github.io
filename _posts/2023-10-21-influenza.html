@@ -66,8 +66,20 @@ image_url: '/img/maintenance-2422173_1280.png'
 <img style="width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_new_data_vlookup.png" alt="Excerpt of spreadsheet showing VLOOKUP">
 <br>
 
+<p style="overflow: hidden; text-align: justify;">Finally I added new columns, where I used  simple formulas to calculate the mortality rates for each of the two age groupings ( under and over 65). This would play a role in the next step of the analysis.</p>
+
 <h2 class="section-heading">Step 4: Statistical Analysis & Testing</h2>
 
-<p style="text-align: justify;">So now that I knew which were the top countries, and the respective top cities and customers in those countries, I wanted know which genres generated the highest revenue. Also of interest were the ratings which were most popular.</p>
+<p style="text-align: center;">H0:    µInfluenza mortality 65+ years = µInfluenza mortality <65 years </p>
+<p style="text-align: center;">HA:    µInfluenza mortality 65+ years <> µInfluenza mortality <65 years </p>
 
+<p style="text-align: justify;">The null and alternative hypothesis are stated above. I was trying to test whether the two groups had the same risk of death/hospitalisation from influenza. This will be a two-tailed test, because we interested in knowing whether the average mortality rate is higher or lower for those in the age group 65+.</p>
+
+<p style="text-align: justify;">The test produced a result with a p-value= 1,50E-171. The p-value is much lower than the alpha. This means the groups are significantly different.</p>
+
+<img style="float: left; margin-right: 15px; width: 400px; height: auto; border: 5px solid #555" class="img-fluid" src="/img/posts/influenza_pivot_deaths.png" alt="Excerpt showing t-test">
+
+<p style="text-align: justify;">The null hypothesis can be rejected. At a 95% confidence level I found significant differences between the average Influenza mortality rates for those aged  <65 years of age and those  65+ years of age. Because of this strong result, I continued my analysis to identify where the age group of people 65 and above are a higher proportion of total poulation.</p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"></p>
 
